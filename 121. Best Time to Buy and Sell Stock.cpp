@@ -4,6 +4,9 @@ using namespace std;
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
+
+    //solution logic: At any given i^th day (each index in prices), the best price you can get is "prices.at(i) - all_time_low_up_until_day_i"
+
         int min = prices.at(0);
         int max_profit = 0;
 
