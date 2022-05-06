@@ -5,15 +5,12 @@ class Solution {
 public:
     bool isPalindrome(string s) {
         //first, strip all non-alpha numeric chars. Also, if a char is uppercase, make it lowercase
-        string s2 = "";
+        string s2 = ""; //don't need [= ""] because the string default constructor is an empty string
         for (int i = 0; i < s.size(); ++i) {
-            if (isalnum(s.at(i))) {
-                if (isupper(s.at(i))) {
-                    s2.push_back(tolower(s.at(i)));
-                } else {
-                    s2.push_back(s.at(i));
-                }
-            }
+
+            //tolower() from <cctype> convertes upper-case letters to lower case, 
+            //and doesn't change other characters at all.
+            if (isalnum(s.at(i))) s2.push_back(tolower(s.at(i))); 
         }
 
         //next, check for palindrome
