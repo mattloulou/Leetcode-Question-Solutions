@@ -3,6 +3,7 @@
         "*.ejs": "html",
         "vector": "cpp",
         "unordered_map": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "xstring": "cpp"
     }
 }
