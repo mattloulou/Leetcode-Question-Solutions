@@ -34,7 +34,7 @@ public:
         return max_subarray;
     }
 
-    //Hargun's Solution:
+    //Hargun's Solution (much more ellegant and faster too):
     /*class Solution {
     public:
         int maxSubArray(vector<int>& nums) {
