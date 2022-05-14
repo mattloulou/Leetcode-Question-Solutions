@@ -26,7 +26,7 @@ public:
                 answer.emplace_back(interval);
             }
 
-            //case 3, they overlap
+            //case 3, interval and [merged_interval_start, merged_interval_end]
             else {
                 merged_interval_start = min(merged_interval_start, interval[0]);
                 merged_interval_end = max(merged_interval_end, interval[1]);
