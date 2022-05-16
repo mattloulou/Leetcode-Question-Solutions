@@ -4,6 +4,14 @@
         "vector": "cpp",
         "unordered_map": "cpp",
         "string": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "utility": "cpp",
+        "queue": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "stack": "cpp",
+        "xhash": "cpp",
+        "xtree": "cpp"
     }
 }
