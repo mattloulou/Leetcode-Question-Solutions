@@ -1,6 +1,21 @@
 #include <vector>
 using namespace std;
 
+//concept learned from Hargun M.
+class Solution {
+ public:
+    int maxSubArray(vector<int>& nums) {
+        int max_sum = nums.at(0);
+        int current_sum = nums.at(0);
+        for (int i = 1; i < nums.size(); ++i) {
+            current_sum = max(nums.at(i), current_sum + nums.at(i));
+            max_sum = max(current_sum, max_sum);
+        }
+        return max_sum;
+    }
+};
+
+/*
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
@@ -33,19 +48,5 @@ public:
 
         return max_subarray;
     }
+};*/
 
-    //Hargun's Solution (much more ellegant and faster too):
-    /*class Solution {
-    public:
-        int maxSubArray(vector<int>& nums) {
-            int sum = nums.at(0);
-            int maxsum = sum;
-            
-            for(int i = 1; i < nums.size(); ++i){
-                sum = max(nums.at(i), sum + nums.at(i));
-                maxsum = max(maxsum, sum);            
-            }
-            return maxsum;
-        }
-    };*/
-};
