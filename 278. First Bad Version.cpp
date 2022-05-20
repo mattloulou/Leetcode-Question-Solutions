@@ -9,10 +9,10 @@ public:
         ul mid = (start + end)/2;
 
         //we keep using binary search until start == end, which will be when both are on the very first bad version.
-        while (start < end) {
+        while (start < end) { //can do: (start != end) instead.
             if (!isBadVersion(mid)) { //this is a magical function given by leetcode
 
-                //if mid is not bad, then the first bad version will be after mid.
+                //if mid is not bad, then the first bad version is GUARANTEED to be AFTER mid.
                 start = mid + 1;
                 
             } else {
@@ -26,7 +26,7 @@ public:
             }
             mid = (start + end)/2;
         }
-        return start; //now they should be equal to each other
+        return start; //recall that now start == end
     }
 
     //this is a magical function given by leetcode
