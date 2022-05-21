@@ -12,6 +12,8 @@
         "map": "cpp",
         "stack": "cpp",
         "xhash": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "xutility": "cpp",
+        "unordered_set": "cpp"
     }
 }
