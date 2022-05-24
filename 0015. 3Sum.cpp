@@ -36,13 +36,13 @@ public:
             }
             ++current_index;
         }
-            
-        return new_vector_end_index;
+        const int& new_size = new_vector_end_index;        
+        return new_size;
     }
 
     vector<vector<int>> threeSum(vector<int>& nums) {
 
-        //we begin by sorting nums, and then removing any duplicate elements above 2 duplicates (except for 0, as 3 0s sum to 0, but not for any other nums).
+        //we begin by sorting nums, and then removing any duplicate elements above 2 duplicates (except for 0, as 3x 0s sum to 0, but not for any other nums).
         sort(nums.begin(), nums.end());
         int vector_size = MaxTwoPerUniqueElement(nums);
 
@@ -50,7 +50,7 @@ public:
         vector<vector<int>> solution;
 
         //Algorithm:
-        //for each element in nums, we will do the 2sum solution for finding 2 numbers that sum to nums[i];
+        //for each element in nums, we will do the 2sum solution for finding 2 numbers that sum to -1*nums[i];
         for (int i = 0; i < vector_size; ++i) {
             //in the potential triplets we are searching for, we are assuming nums[i] will be a part of it.
             //So, 2 other elements in nums must sum to -1*nums[i]
@@ -68,6 +68,8 @@ public:
                     const int& smallest_num = nums[i];
                     const int& middle_num = other_required_number;
                     const int& largest_num = nums[j];
+
+                    //we need to make sure that we don't have duplicate solutions (question statement requires it).
                     if (!ContainsTriplet(solution, smallest_num, middle_num, largest_num)) {
                         solution.emplace_back(vector<int>{smallest_num, middle_num, largest_num}); 
                     }                       
@@ -77,11 +79,13 @@ public:
                     values_and_indices.emplace(nums[j], j);
                 }
             }
-            values_and_indices.clear();
+            values_and_indices.clear(); //reset map because we are trying to achieve a new sum now.
         }
         return solution;
     }
 };
+
+//testing program for MaxTwoPerUniqueElement()
 
 // int main() {
 //     vector<int> test{-1,0,1,-1,2,-1,-4,0,0,0};
