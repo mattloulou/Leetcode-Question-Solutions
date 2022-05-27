@@ -35,7 +35,7 @@ public:
     }
 };
 
-//V2 Queue (no recursion). Source: https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/33443/C++-solution-using-only-one-queue-use-a-marker-NULL/666197
+//V2 Queue (better?) (no recursion). Source: https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/33443/C++-solution-using-only-one-queue-use-a-marker-NULL/666197
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {

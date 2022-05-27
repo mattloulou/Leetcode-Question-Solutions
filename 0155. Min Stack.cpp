@@ -2,6 +2,7 @@
 using namespace std;
 
 //V2 from solution: https://leetcode.com/problems/min-stack/discuss/1209254/C%2B%2B-Simple-code-with-one-stack
+//I didn't copy the code, I just read the first sentence then did it on my own.
 class MinStack {
 public:
     MinStack() {}
