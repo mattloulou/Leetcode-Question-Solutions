@@ -50,7 +50,7 @@ public:
             //we are now skipping past duplicate values for num[i]. Don't forget our for loop already increments i.
             //so, we just want to go until the next element is different from the current one.
             const int i_value = num[i];
-            while (i < num.size()-1 && num[i+1] == i_value) ++i;
+            while (i+1 < num.size() && num[i+1] == i_value) ++i; //we check if i+1 is in range, and if it is the same as the current num[i]
         }
 
         return solution;
