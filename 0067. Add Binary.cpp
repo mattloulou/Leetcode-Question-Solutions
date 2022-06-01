@@ -1,5 +1,6 @@
 #include <string>
 #include <unordered_map>
+#include <algorithm>
 using namespace std;
 class Solution {
 public:
@@ -24,8 +25,13 @@ public:
 
             //add this new value onto the result string.
             const char new_value = '0' + (sum - hasCarry*2);
-            result = new_value + result;
+            result.push_back(new_value); //this makes the result reversed. 
+                                        //it is much better to first make it reversed then to reverse it again at the end,
+                                        //this is because doing `result = new_value + result` apparently makes a new string each time.
         }
+
+        //here we reverse the binary string we made to make it in the correct order.
+        reverse(result.begin(), result.end());
 
         return result;
     }
