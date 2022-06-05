@@ -21,7 +21,6 @@ public:
     }
 };
 
-
 //V2, if you sort the array, the solution will always be in the middle It is quite fast... and O(1) (or O(n) if you can't modify the original.
 #include <algorithm>
 class Solution {
