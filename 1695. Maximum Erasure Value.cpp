@@ -53,7 +53,7 @@ public:
                 visited_numbers.erase(nums[left++]);
             }
 
-            // add the value of the right pointer back
+            // add nums[right] back
             visited_numbers.insert(nums[right]);
             
             // increment the sum
