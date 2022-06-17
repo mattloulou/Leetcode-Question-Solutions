@@ -14,7 +14,7 @@ public:
     }
 };
 
-//V2 using an alternate method: https://leetcode.com/problems/hamming-distance/discuss/94705/My-C%2B%2B-solution-using-bit-manipulation
+//V2 (more efficient) using an alternate method: https://leetcode.com/problems/hamming-distance/discuss/94705/My-C%2B%2B-solution-using-bit-manipulation
 class Solution {
 public:
     int hammingDistance(int x, int y) {
