@@ -10,3 +10,12 @@ public:
         return num ^= int_mask;
     }
 };
+
+//V2 (learned from here: https://leetcode.com/problems/number-complement/discuss/96017/3-line-1-line-C%2B%2B)
+class Solution {
+public:
+    int findComplement(int num) {
+        const int num_leading_zeroes = __builtin_clz(num);
+        return ((~static_cast<unsigned>(0)) >> num_leading_zeroes) ^ num;
+    }
+};
