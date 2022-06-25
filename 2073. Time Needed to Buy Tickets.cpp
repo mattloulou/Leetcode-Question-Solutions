@@ -25,7 +25,7 @@ public:
         int total = 0;
         const int& kth_amount = tickets[k];
         for (int i = 0; i < tickets.size(); ++i) {
-                total += min(tickets[i], kth_amount - (i > k));
+            total += min(tickets[i], kth_amount - (i > k));
         }
         return total;
     }
