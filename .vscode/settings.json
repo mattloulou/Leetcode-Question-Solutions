@@ -55,6 +55,7 @@
         "xmemory": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "fstream": "cpp"
     }
 }
