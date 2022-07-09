@@ -10,7 +10,7 @@ public:
         for (int i = 0; i < nums.size(); ++i) {
 
             //check if the required matching value was already emplaced into inputs
-            if (inputs.count(target - nums.[i])) {
+            if (inputs.count(target - nums[i])) {
                 answer.push_back(i);
                 answer.push_back(inputs.at(target - nums[i]));
                 return answer;
