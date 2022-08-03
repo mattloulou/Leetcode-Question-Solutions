@@ -12,8 +12,8 @@ public:
 
         while (end >= begin) {
             const int mid = (begin + end) / 2; // we want `mid` to be the largest number, so that the number right of `mid` is the smallest
-            if (nums[mid] > nums[(mid+1)%nums.size()]) {
-                return nums[(mid+1)%nums.size()];
+            if (nums[mid] > nums[mid+1]) {
+                return nums[mid+1];
             } else if (nums[mid] > nums[end]) { // such as for 0<-BEGIN 1 2 3<-MID 4 -2 -1<-END
                 begin = mid + 1;
             } else if (nums[mid] < nums[end]) { // such as for 0<-BEGIN 1 2 -4<-MID -3 -2 -1<-END
